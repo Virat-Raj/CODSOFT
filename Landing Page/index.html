@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virat Construction - Building Your Vision</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* Custom Styles */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://placehold.co/1920x1080/444/fff?text=Virat+Construction+Site');
+            background-size: cover;
+            background-position: center;
+        }
+        .cta-button {
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: #f59e0b; /* amber-500 */
+            margin: 8px auto 0;
+            border-radius: 2px;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .project-card-overlay {
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        .project-card:hover .project-card-overlay {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header -->
+    <header id="header" class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-gray-900">
+                Virat<span class="text-amber-500">Construction</span>
+            </a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#home" class="text-gray-600 hover:text-amber-500 transition duration-300">Home</a>
+                <a href="#services" class="text-gray-600 hover:text-amber-500 transition duration-300">Services</a>
+                <a href="#projects" class="text-gray-600 hover:text-amber-500 transition duration-300">Projects</a>
+                <a href="#about" class="text-gray-600 hover:text-amber-500 transition duration-300">About Us</a>
+                <a href="#contact" class="text-gray-600 hover:text-amber-500 transition duration-300">Contact</a>
+            </div>
+            <a href="#contact" class="hidden md:inline-block bg-amber-500 text-white font-semibold px-5 py-2 rounded-lg hover:bg-amber-600 cta-button">Get a Quote</a>
+            <button id="mobile-menu-button" class="md:hidden text-gray-800 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#home" class="block py-2 text-gray-600 hover:text-amber-500">Home</a>
+            <a href="#services" class="block py-2 text-gray-600 hover:text-amber-500">Services</a>
+            <a href="#projects" class="block py-2 text-gray-600 hover:text-amber-500">Projects</a>
+            <a href="#about" class="block py-2 text-gray-600 hover:text-amber-500">About Us</a>
+            <a href="#contact" class="block py-2 text-gray-600 hover:text-amber-500">Contact</a>
+            <a href="#contact" class="block mt-2 bg-amber-500 text-white text-center font-semibold px-5 py-2 rounded-lg hover:bg-amber-600 cta-button">Get a Quote</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-bg h-[calc(100vh-72px)] flex items-center justify-center text-white">
+            <div class="text-center px-4">
+                <h1 class="text-4xl md:text-6xl font-extrabold mb-4 leading-tight">Building Your Vision, Creating Reality</h1>
+                <p class="text-lg md:text-xl mb-8 max-w-3xl mx-auto text-gray-200">From concept to completion, Virat Construction delivers excellence and quality craftsmanship on every project.</p>
+                <a href="#projects" class="bg-amber-500 text-white font-bold px-8 py-4 rounded-lg hover:bg-amber-600 cta-button text-lg">Explore Our Work</a>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 section-title">Our Services</h2>
+                <p class="text-center text-gray-600 mt-4 mb-12 max-w-2xl mx-auto">We offer a wide range of construction services to meet your needs, backed by a commitment to safety and quality.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Service Card 1 -->
+                    <div class="service-card bg-gray-50 p-8 rounded-lg shadow-sm text-center transition-all duration-300">
+                        <div class="bg-amber-100 text-amber-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-gray-900">Residential Construction</h3>
+                        <p class="text-gray-600">Building custom homes with attention to detail and a focus on your family's needs and lifestyle.</p>
+                    </div>
+                    <!-- Service Card 2 -->
+                    <div class="service-card bg-gray-50 p-8 rounded-lg shadow-sm text-center transition-all duration-300">
+                        <div class="bg-amber-100 text-amber-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-gray-900">Commercial Buildings</h3>
+                        <p class="text-gray-600">Constructing state-of-the-art office spaces, retail centers, and industrial facilities.</p>
+                    </div>
+                    <!-- Service Card 3 -->
+                    <div class="service-card bg-gray-50 p-8 rounded-lg shadow-sm text-center transition-all duration-300">
+                        <div class="bg-amber-100 text-amber-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 7h6m0 0l-3-3m3 3l-3 3M9 17h6m0 0l3-3m-3 3l3-3M12 3v18" /></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-gray-900">Renovations & Remodeling</h3>
+                        <p class="text-gray-600">Transforming existing spaces with modern designs, improving functionality and aesthetic appeal.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20 bg-gray-100">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 section-title">Featured Projects</h2>
+                <p class="text-center text-gray-600 mt-4 mb-12 max-w-2xl mx-auto">We are proud of our work. Here are some of our recently completed projects that showcase our quality and expertise.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project Card 1 -->
+                    <div class="project-card relative rounded-lg overflow-hidden shadow-lg group">
+                        <img src="https://placehold.co/600x400/666/fff?text=Modern+Villa" alt="Modern Villa Project" class="w-full h-full object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/cccccc/ffffff?text=Image+Not+Found';">
+                        <div class="project-card-overlay absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center p-4">
+                            <div class="text-center text-white">
+                                <h3 class="text-xl font-bold mb-2">Modern Villa</h3>
+                                <p class="text-gray-300">Raipur, Chhattisgarh</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project Card 2 -->
+                    <div class="project-card relative rounded-lg overflow-hidden shadow-lg group">
+                        <img src="https://placehold.co/600x400/555/fff?text=Commercial+Hub" alt="Commercial Hub Project" class="w-full h-full object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/cccccc/ffffff?text=Image+Not+Found';">
+                        <div class="project-card-overlay absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center p-4">
+                            <div class="text-center text-white">
+                                <h3 class="text-xl font-bold mb-2">City Commercial Hub</h3>
+                                <p class="text-gray-300">Bhilai, Chhattisgarh</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project Card 3 -->
+                    <div class="project-card relative rounded-lg overflow-hidden shadow-lg group">
+                        <img src="https://placehold.co/600x400/777/fff?text=Luxury+Apartments" alt="Luxury Apartments Project" class="w-full h-full object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/cccccc/ffffff?text=Image+Not+Found';">
+                        <div class="project-card-overlay absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center p-4">
+                            <div class="text-center text-white">
+                                <h3 class="text-xl font-bold mb-2">Skyline Apartments</h3>
+                                <p class="text-gray-300">Raipur, Chhattisgarh</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/2">
+                        <img src="https://placehold.co/600x450/ddd/333?text=Our+Team" alt="Virat Construction Team" class="rounded-lg shadow-xl w-full" onerror="this.onerror=null;this.src='https://placehold.co/600x450/cccccc/ffffff?text=Image+Not+Found';">
+                    </div>
+                    <div class="md:w-1/2">
+                        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">About Virat Construction</h2>
+                        <div class="w-20 h-1 bg-amber-500 mb-6"></div>
+                        <p class="text-gray-600 mb-4">For over 15 years, Virat Construction has been a cornerstone of the building community in Chhattisgarh. Founded on the principles of integrity, quality, and unwavering commitment to our clients, we have built a reputation for turning ambitious visions into tangible realities.</p>
+                        <p class="text-gray-600 mb-6">Our team of experienced engineers, architects, and skilled laborers work in synergy to ensure every project is completed on time, within budget, and to the highest standards of safety and quality.</p>
+                        <a href="#contact" class="text-amber-600 font-bold hover:underline">Partner with us →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-gray-800 text-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center section-title">Get In Touch</h2>
+                <p class="text-center text-gray-300 mt-4 mb-12 max-w-2xl mx-auto">Have a project in mind? We'd love to hear from you. Fill out the form below or contact us directly.</p>
+                <div class="bg-white text-gray-800 rounded-lg shadow-xl p-8 max-w-4xl mx-auto">
+                    <!-- This form is for demonstration purposes. -->
+                    <form action="#" method="POST">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                                <input type="text" name="name" id="name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-amber-500 focus:border-amber-500">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                                <input type="email" name="email" id="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-amber-500 focus:border-amber-500">
+                            </div>
+                        </div>
+                        <div class="mt-6">
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                            <textarea name="message" id="message" rows="5" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-amber-500 focus:border-amber-500"></textarea>
+                        </div>
+                        <div class="mt-6 text-center">
+                            <button type="submit" class="bg-amber-500 text-white font-bold px-8 py-3 rounded-lg hover:bg-amber-600 cta-button w-full md:w-auto">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300">
+        <div class="container mx-auto px-6 py-10">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-4">Virat<span class="text-amber-500">Construction</span></h3>
+                    <p class="text-gray-400">Building the future, one project at a time.</p>
+                    <p class="text-gray-400 mt-2">Raipur, Chhattisgarh, India</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Quick Links</h4>
+                    <ul>
+                        <li class="mb-2"><a href="#services" class="hover:text-amber-400">Services</a></li>
+                        <li class="mb-2"><a href="#projects" class="hover:text-amber-400">Projects</a></li>
+                        <li class="mb-2"><a href="#about" class="hover:text-amber-400">About Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Connect With Us</h4>
+                    <p class="mb-2"><strong>Email:</strong> contact@viratcon.com</p>
+                    <p><strong>Phone:</strong> +91 12345 67890</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-6 text-center text-gray-500">
+                <p>&copy; <span id="year"></span> Virat Construction. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // JavaScript to set the current year in the footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+        
+        // Close mobile menu when a link is clicked
+        const navLinks = document.querySelectorAll('#mobile-menu a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+    </script>
+
+</body>
+</html>
